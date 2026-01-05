@@ -1,3 +1,6 @@
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -136,3 +139,4 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, translate))
 
 print("Bot is running...")
 app.run_polling()
+
